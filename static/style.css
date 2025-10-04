@@ -1,0 +1,125 @@
+/* ---------- Global Styles ---------- */
+/* ---------- Modern Orb Grid Background ---------- */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Base background color */
+  background-color: #020617;
+
+  /* The grid + radial orb gradient combo */
+  background-image:
+    linear-gradient(to right, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* ---------- Card Container ---------- */
+.container {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 32px 28px;
+  text-align: center;
+  color: #222;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- Title ---------- */
+h1 {
+  font-size: 1.8rem;
+  /* font-weight: 700; */
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 2px rgba(156, 156, 156, 0.05);
+}
+
+/* ---------- Textarea ---------- */
+textarea {
+  width: 95%;
+  height: 160px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
+  font-size: 15px;
+  resize: none;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 6px rgba(108, 99, 255, 0.3);
+}
+
+/* ---------- Button ---------- */
+button {
+  background: linear-gradient(135deg, #6c63ff, #4f46e5);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  transform: scale(1.02);
+}
+
+/* ---------- Result Display ---------- */
+#result {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Result Colors */
+#result.spam {
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+#result.ham {
+  color: #166534;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 24px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  textarea {
+    height: 130px;
+  }
+}
